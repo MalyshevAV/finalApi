@@ -1,0 +1,43 @@
+name: myfirstAcnions 
+on:
+ push:
+    branches: 
+      - master
+jobs:  
+  build:
+    runs-on: ubuntu-latest
+    steps:   
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with: 
+          distribution: 'temurin'
+          java-version: '17'   
+      - name: Run tests 
+        run: mvn clean test
+        # run: mvn clean test -Dtest=ClassifierTest
+        # run: mvn clean test
+
+      # Копируем историю в папку Аллюр хистори
+      - name: Copy History
+        uses: actions/checkout@v3
+        if: always()
+        with:
+          ref: gh-pages
+          path: gh-pages
+       # Строим отчет
+      - name: Build report 
+        uses: simple-elf/allure-report-action@master
+        if: always()
+        with:
+          gh_pages: gh-pages
+          allure_report: allure-report
+          allure_results: target/allure-results
+          allure_history: allure-history
+          # keep_reports: 20
+      - name: Publish report
+        if: always() 
+        uses: peaceiris/actions-gh-pages@v2
+        env:
+           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+           PUBLISH_BRANCH: gh-pages
+           PUBLISH_DIR: allure-history
