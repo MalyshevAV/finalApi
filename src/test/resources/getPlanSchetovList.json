@@ -1,0 +1,125 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": [
+    {
+      "type": "object",
+      "properties": {
+        "guid": {
+          "type": "string",
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "archive": {
+          "type": "boolean"
+        },
+        "dateOutputArchive": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 150
+        },
+        "code": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 11
+        },
+        "parent": {
+          "type": "string",
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "parentCode": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 9
+        },
+        "type": {
+          "type": "integer",
+          "enum": [1,2,3]
+        },
+        "group": {
+          "type": "boolean"
+        },
+        "offBalance": {
+          "type": "boolean"
+        },
+        "quantitative": {
+          "type": "boolean"
+        },
+        "foreignExchange": {
+          "type": "boolean"
+        },
+        "tax": {
+          "type": "boolean"
+        },
+        "long-term": {
+          "type": "boolean"
+        },
+        "accountingDivision": {
+          "type": "boolean"
+        },
+        "accountingAreasActivity": {
+          "type": "boolean"
+        },
+        "subconto1": {
+          "type": "string",
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "subconto1Name": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 255
+        },
+        "subconto2": {
+          "type": "string",
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "subconto2Name": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 255
+        },
+        "subconto3": {
+          "type": "string",
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "subconto3Name": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 255
+        }
+      },
+      "required": [
+        "guid",
+        "archive",
+        "dateOutputArchive",
+        "name",
+        "code",
+        "parent",
+        "parentCode",
+        "type",
+        "group",
+        "offBalance",
+        "quantitative",
+        "foreignExchange",
+        "tax",
+        "longTerm",
+        "accountingDivision",
+        "accountingAreasActivity",
+        "subconto1",
+        "subconto1Name",
+        "subconto2",
+        "subconto2Name",
+        "subconto3",
+        "subconto3Name"
+      ]
+    }
+  ]
+}

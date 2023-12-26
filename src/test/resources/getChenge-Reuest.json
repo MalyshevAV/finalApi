@@ -1,0 +1,602 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "guid": {
+      "type": "string",
+      "minLength": 36,
+      "maxLength": 36,
+      "required": ["guid"]
+    },
+    "be": {
+      "type": "string",
+      "minLength": 36,
+      "maxLength": 36,
+      "required": ["be"]
+    },
+    "status": {
+      "type": "integer",
+      "enum": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "required": ["status"]
+    },
+    "code": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 9,
+      "required": ["code"]
+    },
+    "autor": {
+      "type": "object",
+      "properties": {
+        "fio": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "email": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 30
+        }
+      },
+      "required": [
+        "fio",
+        "email"
+      ]
+    },
+    "responsible": {
+      "type": "object",
+      "properties": {
+        "fio": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "email": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 30
+        }
+      },
+      "required": [
+        "fio",
+        "email"
+      ]
+    },
+    "date": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 20,
+      "required": ["date"]
+    },
+    "periodExecution": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 20,
+      "required": ["periodExecution"]
+    },
+    "comment": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024,
+      "required": ["comment"]
+    },
+    "data": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "guid": {
+              "type": "string",
+              "minLength": 36,
+              "maxLength": 36
+            },
+            "code": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 9
+            },
+            "archive": {
+              "type": "boolean"
+            },
+            "dateOutputArchive": {
+              "type": "string",
+              "minLength": 10,
+              "maxLength": 10
+            },
+            "obsolete": {
+              "type": "boolean"
+            },
+            "referencePosition": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "minLength": 36,
+              "maxLength": 36
+            },
+            "consolidatedRecord": {
+              "type": "boolean"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 150
+            },
+            "nameFull": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 255
+            },
+            "namePurchasing": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 150
+            },
+            "nameSale": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 500
+            },
+            "ownershipSign": {
+              "type": "integer",
+              "enum": [
+                0,
+                1
+              ]
+            },
+            "analyticsPurchasable": {
+              "type": "string",
+              "minLength": 36,
+              "maxLength": 36
+            },
+            "baseUnit": {
+              "type": "string",
+              "minLength": 36,
+              "maxLength": 36
+            },
+            "baseUnitCode": {
+              "type": "integer",
+              "minLength": 1,
+              "maxLength": 4
+            },
+            "drawingDenotation": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "minLength": 1,
+              "maxLength": 255
+            },
+            "material": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 255
+            },
+            "materialGOST": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 255
+            },
+            "sortament": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 255
+            },
+            "sortamentGOST": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 255
+            },
+            "seriality": {
+              "type": "integer",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "unifiedСlassifier": {
+              "type": "string",
+              "minLength": 36,
+              "maxLength": 36
+            },
+            "codeUC": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 50
+            },
+            "classifierEOP": {
+              "type": "string",
+              "minLength": 36,
+              "maxLength": 36
+            },
+            "codeEOP": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 50
+            },
+            "includedEOP": {
+              "type": "boolean"
+            },
+            "mainManufacturer": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "internalCooperation": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "oneTimePurchase": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "groupCost": {
+              "type": "string",
+              "minLength": 36,
+              "maxLength": 36
+            },
+            "TNVED": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "minLength": 36,
+              "maxLength": 36
+            },
+            "OKVED": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "minLength": 36,
+              "maxLength": 36
+            },
+            "OKPD2": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "minLength": 36,
+              "maxLength": 36
+            },
+            "height": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minLength": 0,
+              "maxLength": 20
+            },
+            "width": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minLength": 0,
+              "maxLength": 20
+            },
+            "length": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minLength": 0,
+              "maxLength": 20
+            },
+            "dimensionsUnit": {
+              "type": [
+                "null",
+                "string"
+              ],
+              "minLength": 36,
+              "maxLength": 36
+            },
+            "dimensionsUnitCode": {
+              "type": "integer",
+              "minLength": 1,
+              "maxLength": 4
+            },
+            "weight": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minLength": 0,
+              "maxLength": 20
+            },
+            "weightUnit": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "minLength": 36,
+              "maxLength": 36
+            },
+            "weightUnitCode": {
+              "type": "integer",
+              "minLength": 1,
+              "maxLength": 4
+            },
+            "service": {
+              "type": "boolean"
+            },
+            "electronicCatalog": {
+              "type": "boolean"
+            },
+            "image": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 250
+            },
+            "comment": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1024
+            },
+            "properties": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "guid": {
+                      "type": "string",
+                      "minLength": 36,
+                      "maxLength": 36
+                    },
+                    "name": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 50
+                    },
+                    "value": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 150
+                    },
+                    "unit": {
+                      "type": "string",
+                      "minLength": 36,
+                      "maxLength": 36
+                    }
+                  },
+                  "required": [
+                    "guid",
+                    "name",
+                    "value",
+                    "unit"
+                  ]
+                }
+              ]
+            },
+            "alternativeUnit": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "unit": {
+                      "type": "string",
+                      "minLength": 36,
+                      "maxLength": 36
+                    },
+                    "conversionFactor": {
+                      "type": "number",
+                      "minLength": 0,
+                      "maxLength": 20
+                    },
+                    "description": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 255
+                    }
+                  },
+                  "required": [
+                    "unit",
+                    "conversionFactor",
+                    "description"
+                  ]
+                }
+              ]
+            },
+            "analogue": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "product": {
+                      "type": "string",
+                      "minLength": 36,
+                      "maxLength": 36
+                    },
+                    "analogue": {
+                      "type": "boolean"
+                    },
+                    "basis": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 20
+                    }
+                  },
+                  "required": [
+                    "product",
+                    "analogue",
+                    "basis"
+                  ]
+                }
+              ]
+            },
+            "occurrences": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string",
+                  "minLength": 36,
+                  "maxLength": 36
+                }
+              ]
+            },
+            "spares": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string",
+                  "minLength": 36,
+                  "maxLength": 36
+                }
+              ]
+            },
+            "suppliers": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string",
+                  "minLength": 36,
+                  "maxLength": 36
+                }
+              ]
+            }
+          },
+          "required": [
+            "guid",
+            "code",
+            "archive",
+            "dateOutputArchive",
+            "obsolete",
+            "referencePosition",
+            "consolidatedRecord",
+            "name",
+            "nameFull",
+            "namePurchasing",
+            "nameSale",
+            "ownershipSign",
+            "analyticsPurchasable",
+            "baseUnit",
+            "baseUnitCode",
+            "drawingDenotation",
+            "material",
+            "materialGOST",
+            "sortament",
+            "sortamentGOST",
+            "seriality",
+            "unifiedСlassifier",
+            "codeUC",
+            "classifierEOP",
+            "codeEOP",
+            "includedEOP",
+            "mainManufacturer",
+            "internalCooperation",
+            "oneTimePurchase",
+            "groupCost",
+            "TNVED",
+            "OKVED",
+            "OKPD2",
+            "height",
+            "width",
+            "length",
+            "dimensionsUnit",
+            "dimensionsUnitCode",
+            "weight",
+            "weightUnit",
+            "weightUnitCode",
+            "service",
+            "electronicCatalog",
+            "image",
+            "comment",
+            "properties",
+            "alternativeUnit",
+            "analogue",
+            "occurrences",
+            "spares",
+            "suppliers"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "guid": {
+              "type": "string",
+              "minLength": 36,
+              "maxLength": 36
+            },
+            "be": {
+              "type": "string",
+              "minLength": 36,
+              "maxLength": 36
+            },
+            "code": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 9
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 150
+            },
+            "nomenclature": {
+              "type": "string",
+              "minLength": 36,
+              "maxLength": 36
+            },
+            "process": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 150
+            },
+            "estimate": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 9
+            },
+            "estimateNumber": {
+              "type": "integer",
+              "minLength": 1,
+              "maxLength": 15
+            },
+            "re-exhibited": {
+              "type": "boolean"
+            },
+            "internal": {
+              "type": "boolean"
+            },
+            "codeUC": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 50
+            }
+          },
+          "required": [
+            "guid",
+            "be",
+            "code",
+            "name",
+            "nomenclature",
+            "process",
+            "estimate",
+            "estimateNumber",
+            "re-exhibited",
+            "internal",
+            "codeUC"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+
+      "type": "object",
+      "properties": {
+        "guid": {
+          "type": "string",
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "archive": {
+          "type": "boolean"
+        },
+        "dateOutputArchive": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 20
+
+        },
+        "code": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 9
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "nameAbbreviated": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "nameFull": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 150
+        },
+        "type": {
+          "type": "integer",
+          "enum": [1, 2]
+        },
+        "intragroup": {
+          "type": "boolean"
+        },
+        "organization": {
+          "type": "string",
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "organizationCode": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 9
+        },
+        "concernType": {
+          "type": "string",
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "concernTypeCode": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 9
+        },
+        "noResident": {
+          "type": "boolean"
+        },
+        "inn": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 12
+        },
+        "kpp": {
+          "type": "string",
+          "minLength": 9,
+          "maxLength": 9
+        },
+        "kppAdditional": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 9
+        },
+        "registrationNumber": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 50
+        },
+        "ogrn": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 13
+        },
+        "okpo": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 14
+        },
+        "okved": {
+          "type": "string",
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "okvedCode": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 12
+        },
+        "separateUnit": {
+          "type": "boolean"
+        },
+        "partnerHead": {
+          "type": "string",
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "bank": {
+          "type": "string",
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "bankBIC": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 9
+        },
+        "okopf": {
+          "type": "string",
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "okopfName": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 150
+        },
+        "reliabilitySupplier": {
+          "type": "number"
+        },
+        "reliabilityBuyer": {
+          "type": "number"
+        },
+        "verified": {
+          "type": "boolean"
+        },
+        "dateVerified": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 20
+        },
+        "country": {
+          "type": "string",
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "countryCode": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 3
+
+        },
+        "region": {
+          "type": "string",
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "regionCode": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 3
+        },
+        "contactInformation": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "integer",
+                  "enum": [1, 2, 3, 4]
+                },
+                "typeInformation": {
+                  "type": "integer",
+                  "enum": [1, 2, 3, 4, 5, 6, 7]
+                },
+                "performance": {
+                  "type": "string",
+                  "minLength": 0,
+                  "maxLength": 500
+                },
+                "country": {
+                  "type": "string",
+                  "minLength": 0,
+                  "maxLength": 100
+                },
+                "region": {
+                  "type": "string",
+                  "minLength": 0,
+                  "maxLength": 50
+                },
+                "city": {
+                  "type": "string",
+                  "minLength": 0,
+                  "maxLength": 50
+                },
+                "email": {
+                  "type": "string",
+                  "minLength": 0,
+                  "maxLength": 100
+                },
+                "phone": {
+                  "type": "string",
+                  "minLength": 0,
+                  "maxLength": 20
+                }
+              },
+              "required": [
+                "type",
+                "typeInformation",
+                "performance",
+                "country",
+                "region",
+                "city",
+                "email",
+                "phone"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "guid",
+        "archive",
+        "dateOutputArchive",
+        "code",
+        "name",
+        "nameAbbreviated",
+        "nameFull",
+        "type",
+        "intragroup",
+        "organization",
+        "organizationCode",
+        "concernType",
+        "concernTypeCode",
+        "noResident",
+        "inn",
+        "kpp",
+        "kppAdditional",
+        "registrationNumber",
+        "ogrn",
+        "okpo",
+        "okved",
+        "okvedCode",
+        "separateUnit",
+        "partnerHead",
+        "bank",
+        "bankBIC",
+        "okopf",
+        "okopfName",
+        "reliabilitySupplier",
+        "reliabilityBuyer",
+        "verified",
+        "dateVerified",
+        "country",
+        "countryCode",
+        "region",
+        "regionCode",
+        "contactInformation"
+      ]
+    }
+

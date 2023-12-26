@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "guid": {
+        "type": "string",
+        "minLength": 36,
+        "maxLength": 36
+      },
+      "name": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 150
+      },
+      "comment": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 1024
+      },
+      "code": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 9
+      },
+      "codeMnemonic": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 10
+      }
+    },
+    "required": ["guid","name", "comment", "code", "codeMnemonic" ]
+  }

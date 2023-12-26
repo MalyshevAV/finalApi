@@ -1,0 +1,134 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "guid": {
+        "type": "string",
+        "minLength": 36,
+        "maxLength": 36
+      },
+      "code": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 10
+      },
+      "unifiedClassifier": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "minLength": 36,
+        "maxLength": 36
+      },
+      "name": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 150
+      },
+      "nameFull": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 255
+      },
+      "drawingDenotation": {
+        "type": ["string", "null"],
+        "minLength": 0,
+        "maxLength": 255
+      },
+      "ownershipSign": {
+        "type": "integer",
+        "enum": [0, 1]
+      },
+      "seriality": {
+        "type": "integer",
+        "enum": [0,1,2,3,4,5]
+      },
+
+      "supplier": {
+        "type": [
+        "string",
+        "null"],
+        "minLength": 36,
+        "maxLength": 36
+      },
+      "baseUnit": {
+        "type": "string",
+        "minLength": 36,
+        "maxLength": 36
+      },
+      "height": {
+        "type": ["number", "null"],
+        "minLength": 0,
+        "maxLength": 10
+      },
+      "width": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minLength": 0,
+        "maxLength": 10
+      },
+      "length": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minLength": 0,
+        "maxLength": 10
+      },
+      "dimensionsUnit": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "minLength": 36,
+        "maxLength": 36
+      },
+      "weight": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minLength": 0,
+        "maxLength": 10
+      },
+      "weightUnit": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "minLength": 36,
+        "maxLength": 36
+      },
+      "service": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+       }
+    },
+
+    "required": [
+      "guid",
+      "code",
+      "unifiedClassifier",
+      "name",
+      "nameFull",
+      "drawingDenotation",
+      "ownershipSign",
+      "seriality",
+      "supplier",
+      "baseUnit",
+      "height",
+      "width",
+      "length",
+      "dimensionsUnit",
+      "weight",
+      "weightUnit",
+      "service"
+    ]
+  }
+}

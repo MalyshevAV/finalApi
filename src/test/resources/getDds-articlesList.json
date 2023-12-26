@@ -1,0 +1,136 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+  "properties": {
+    "guid": {
+      "type": "string",
+      "minLength": 36,
+      "maxLength": 36
+  },
+    "archive": {
+      "type": "boolean"
+    },
+    "dateOutputArchive": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 20
+   },
+    "name": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255
+    },
+    "code": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 9
+    },
+    "codeDDS": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 50
+    },
+    "parent": {
+      "type": "string",
+      "minLength": 36,
+      "maxLength": 36
+},
+    "parentCode": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 9
+    },
+    "parentCodeDDS": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 50
+    },
+    "consolidated": {
+      "type": "boolean"
+    },
+    "typeDDS": {
+      "type": "integer",
+      "enum": [1,2]
+    },
+    "vidDDS": {
+      "type": "string",
+      "minLength": 36,
+      "maxLength": 36
+    },
+    "vidDDScode": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 9
+    },
+    "dateStart": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 20
+    },
+    "dateEnd": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 20
+    },
+    "localDDS": {
+      "type": "boolean"
+    },
+    "organization": {
+      "type": "string",
+      "minLength": 36,
+      "maxLength": 36
+    },
+    "organizationCode": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 9
+    },
+    "organizationCodeMSFO": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 50
+    },
+    "typeActivities": {
+      "type": "integer",
+      "enum": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  "required": [
+    "guid",
+    "archive",
+    "dateOutputArchive",
+    "name",
+    "code",
+    "codeDDS",
+    "parent",
+    "parentCode",
+    "parentCodeDDS",
+    "consolidated",
+    "typeDDS",
+    "vidDDS",
+    "vidDDScode",
+    "dateStart",
+    "dateEnd",
+    "localDDS",
+    "organization",
+    "organizationCode",
+    "organizationCodeMSFO",
+    "typeActivities"
+  ]
+}
+  }
+
+
+
+
+
+
+
+
+

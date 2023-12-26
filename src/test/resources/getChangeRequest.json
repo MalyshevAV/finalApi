@@ -1,0 +1,466 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "guid": {
+      "type": "string",
+      "minLength": 36,
+      "maxLength": 36
+    },
+    "code": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 10
+    },
+    "status": {
+      "type": "integer",
+      "enum": [1,2,3,4,5]
+    },
+    "autor": {
+      "type": "object",
+      "properties": {
+        "fio": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 100
+
+        },
+        "email": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 30
+        }
+      },
+      "required": [
+        "fio",
+        "email"
+      ]
+    },
+    "responsible": {
+      "type": "object",
+      "properties": {
+        "fio": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 100
+
+        },
+        "email": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 30
+        }
+      },
+      "required": [
+        "fio",
+        "email"
+      ]
+    },
+    "date": {
+      "type": "string",
+      "minLength": 18,
+      "maxLength": 20
+    },
+    "periodExecution": {
+      "type": "string",
+      "minLength": 18,
+      "maxLength": 20
+    },
+    "comment": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 1024
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "guid": {
+          "type": "string",
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "code": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 10
+        },
+        "archive": {
+          "type": "boolean"
+        },
+        "dateOutputArchive": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 20
+        },
+        "obsolete": {
+          "type": ["null","boolean"]
+        },
+        "referencePosition": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 36
+        },
+        "consolidatedRecord": {
+          "type": ["null","boolean"]
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 150
+        },
+        "nameFull": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 255
+        },
+        "namePurchasing": {
+          "type": ["null","string"],
+          "minLength": 0,
+          "maxLength": 500
+        },
+        "nameSale": {
+          "type": ["null","string"],
+          "minLength": 0,
+          "maxLength": 500
+        },
+        "ownershipSign": {
+          "type": ["null","integer"],
+
+          "enum": [0,1]
+        },
+        "analyticsPurchasable": {
+          "type": ["null","string"],
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "baseUnit": {
+          "type": "string",
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "baseUnitCode": {
+          "type": "integer",
+          "minLength": 1,
+          "maxLength": 4
+        },
+        "drawingDenotation": {
+          "type": ["null","string"],
+          "minLength": 0,
+          "maxLength": 255
+        },
+        "material": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 255
+        },
+        "materialGOST": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 255
+        },
+        "sortament": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 255
+        },
+        "sortamentGOST": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 255
+        },
+        "seriality": {
+          "type": "integer",
+          "enum": [1,2,3,5]
+        },
+        "unifiedClassifier": {
+          "type": "string",
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "codeUC": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 50
+        },
+        "classifierEOP": {
+          "type": "string",
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "codeEOP": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 50
+        },
+        "includedEOP": {
+          "type": ["null","boolean"]
+        },
+        "oneTimePurchase": {
+          "type": ["null","boolean"]
+        },
+        "groupCost": {
+          "type": ["null", "string"],
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "tnved": {
+          "type": ["null", "string"],
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "okved": {
+          "type": ["null", "string"],
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "okpd2": {
+          "type": ["null", "string"],
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "height": {
+          "type": ["null","number"],
+          "minLength": 1,
+          "maxLength": 10
+        },
+        "width": {
+          "type": ["null","number"],
+          "minLength": 1,
+          "maxLength": 10
+        },
+        "length": {
+          "type": ["null","number"],
+          "minLength": 1,
+          "maxLength": 10
+        },
+        "dimensionsUnit": {
+          "type": ["null","string"],
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "dimensionsUnitCode": {
+          "type": "integer",
+          "minLength": 1,
+          "maxLength": 4
+        },
+        "weight": {
+          "type": ["null","number"],
+          "minLength": 1,
+          "maxLength": 10
+        },
+        "weightUnit": {
+          "type": ["null","string"],
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "weightUnitCode": {
+          "type": "integer",
+          "minLength": 1,
+          "maxLength": 4
+        },
+        "service": {
+          "type": ["null","boolean"]
+        },
+        "electronicCatalog": {
+          "type": ["null","boolean"]
+        },
+        "image": {
+          "type": ["null","string"],
+          "minLength": 0,
+          "maxLength": 250
+        },
+        "comment": {
+          "type": ["null","string"],
+          "minLength": 0,
+          "maxLength": 1024
+        },
+        "properties": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "guid": {
+                  "type": "string",
+                  "minLength": 36,
+                  "maxLength": 36
+                },
+                "name": {
+                  "type": "string",
+                  "minLength": 0,
+                  "maxLength": 50
+                },
+                "value": {
+                  "type": "string",
+                  "minLength": 0,
+                  "maxLength": 150
+                },
+                "unit": {
+                  "type": "string",
+                  "minLength": 36,
+                  "maxLength": 36
+                }
+              },
+              "required": [
+                "guid",
+                "name",
+                "value",
+                "unit"
+              ]
+            }
+          ]
+        },
+        "alternativeUnit": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "unit": {
+                  "type": "string",
+                  "minLength": 36,
+                  "maxLength": 36
+                },
+                "conversionFactor": {
+                  "type": "number",
+                  "minLength": 0,
+                  "maxLength": 10
+                },
+                "description": {
+                  "type": "string",
+                  "minLength": 0,
+                  "maxLength": 255
+                }
+              },
+              "required": [
+                "unit",
+                "conversionFactor",
+                "description"
+              ]
+            }
+          ]
+        },
+        "analogue": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "product": {
+                  "type": "string",
+                  "minLength": 36,
+                  "maxLength": 36
+                },
+                "analogue": {
+                  "type": "boolean"
+                },
+                "basis": {
+                  "type": "string",
+                  "minLength": 0,
+                  "maxLength": 255
+                }
+              },
+              "required": [
+                "product",
+                "analogue",
+                "basis"
+              ]
+            }
+          ]
+        },
+        "occurrences": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string",
+              "minLength": 36,
+              "maxLength": 36
+            }
+          ]
+        },
+        "spares": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string",
+              "minLength": 36,
+              "maxLength": 36
+            }
+          ]
+        },
+        "suppliers": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string",
+              "minLength": 36,
+              "maxLength": 36
+            }
+          ]
+        }
+      },
+      "required": [
+        "guid",
+        "code",
+        "archive",
+        "dateOutputArchive",
+        "obsolete",
+        "referencePosition",
+        "consolidatedRecord",
+        "name",
+        "nameFull",
+        "namePurchasing",
+        "nameSale",
+        "ownershipSign",
+        "analyticsPurchasable",
+        "baseUnit",
+        "baseUnitCode",
+        "drawingDenotation",
+        "material",
+        "materialGOST",
+        "sortament",
+        "sortamentGOST",
+        "seriality",
+        "unifiedClassifier",
+        "codeUC",
+        "classifierEOP",
+        "codeEOP",
+        "includedEOP",
+        "oneTimePurchase",
+        "groupCost",
+        "tnved",
+        "okved",
+        "okpd2",
+        "height",
+        "width",
+        "length",
+        "dimensionsUnit",
+        "dimensionsUnitCode",
+        "weight",
+        "weightUnit",
+        "weightUnitCode",
+        "service",
+        "electronicCatalog",
+        "image",
+        "comment",
+        "properties",
+        "alternativeUnit",
+        "analogue",
+        "occurrences",
+        "spares",
+        "suppliers"
+      ]
+    }
+  },
+  "required": [
+    "guid",
+    "code",
+    "status",
+    "autor",
+    "responsible",
+    "date",
+    "periodExecution",
+    "comment",
+    "data"
+  ]
+}

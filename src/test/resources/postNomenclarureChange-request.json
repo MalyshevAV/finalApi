@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "responsible": {
+      "type": "object",
+      "properties": {
+        "fio": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "fio",
+        "email"
+      ]
+    },
+    "comment": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "responsible",
+    "comment"
+  ]
+}

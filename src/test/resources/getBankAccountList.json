@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "guid": {
+        "type": "string",
+        "minLength": 36,
+        "maxLength": 36
+      },
+      "partner": {
+        "type": "string",
+        "minLength": 36,
+        "maxLength": 36
+      },
+      "type": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "name": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "number": {
+        "type": "string",
+        "minLength": 20,
+        "maxLength": 20
+      },
+      "currency": {
+        "type": "string",
+        "minLength": 36,
+        "maxLength": 36
+      },
+      "currencyCode": {
+        "type": "string",
+        "minLength": 3,
+        "maxLength": 3
+      },
+      "bank": {
+        "type": "string",
+        "minLength": 36,
+        "maxLength": 36
+      },
+      "bankBic": {
+        "type": "string",
+        "minLength": 9,
+        "maxLength": 9
+      },
+      "bankSettlement": {
+        "type": "string",
+        "minLength": 36,
+        "maxLength": 36
+      },
+      "bankSettlementBic": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 9
+      },
+      "dateОpening": {
+        "type": "string",
+        "minLength": 10,
+        "maxLength": 20
+      },
+      "dateClosing": {
+        "type": "string",
+        "minLength": 10,
+        "maxLength": 20
+      }
+    },
+    "required": [
+      "guid",
+      "partner",
+      "type",
+      "name",
+      "number",
+      "currency",
+      "currencyCode",
+      "bank",
+      "bankBic",
+      "bankSettlement",
+      "bankSettlementBic",
+      "dateОpening",
+      "dateClosing"
+    ]
+  }
+}

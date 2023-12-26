@@ -1,0 +1,28 @@
+{
+  "autor": {
+    "fio": "Иванов Иван Иванович",
+    "email": "ivanov@yandex.ru"
+  },
+  "type": 0,
+  "data": {
+    "guid": "F9168C5E-CEB2-4faa-B6BF-329BF39FA1E4",
+    "guidBE": "H9168C5E-CEB2-4faa-B6BF-329BF39FA1E4",
+    "be": "МСФОКодБЕ",
+    "codeUC": "01.02.01",
+    "name": "Болт 1.1.М20 х 800. ВСт3пс2 ГОСТ 24379.1-2012",
+    "fullName": "Болт 1.1.М20 х 800. ВСт3пс2 ГОСТ 24379.1-2012 (Полное наименование)",
+    "drawingDenotation": "24379.1-2012",
+    "ownershipSign": 0,
+    "seriality": 1,
+    "supplier": true,
+    "baseUnit": 796,
+    "height": "12,330",
+    "width": "1,450",
+    "length": "9,985",
+    "dimensionsUnit": 796,
+    "weight": "1,500",
+    "weightUnit": 796
+  },
+  "comment": "Комментарий",
+  "guid": "L7778C5E-CEB2-4faa-B6BF-329BF39FA1E4"
+}

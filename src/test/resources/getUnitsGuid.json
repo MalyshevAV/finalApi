@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type" : "object",
+  "properties" : {
+
+    "guid": {
+      "type": "string",
+      "minLength": 36,
+      "maxLength": 36
+    },
+    "code": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 4
+    },
+    "name": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 25
+    },
+    "nameFull": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 100
+    },
+    "internationalReduction": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 3
+    },
+    "archive": {
+      "type": "boolean"
+    },
+    "dateOutputArchive": {
+      "type": ["null","string"],
+      "minLength": 10,
+      "maxLength": 20
+    }
+},
+  "required": ["guid","name", "nameFull", "code", "internationalReduction", "archive", "dateOutputArchive" ]
+}

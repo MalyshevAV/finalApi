@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type" : "object",
+  "properties" : {
+    "guid": {
+      "type": "string",
+      "minLength": 36,
+      "maxLength": 36
+    },
+    "code": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 14
+    },
+    "parent": {
+      "type": "string",
+      "minLength": 36,
+      "maxLength": 36
+    },
+    "name": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 100
+    },
+    "owner": {
+      "type": "string",
+      "minLength": 36,
+      "maxLength": 36
+    },
+    "consolidatedGroup": {
+      "type": "boolean"
+    },
+    "okp": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 25
+    },
+    "tnved": {
+      "type": ["null","string"],
+      "minLength": 36,
+      "maxLength": 36
+    },
+    "okved": {
+      "type": ["null","string"],
+      "minLength": 36,
+      "maxLength": 36
+    },
+    "okpd2": {
+      "type": ["null","string"],
+      "minLength": 36,
+      "maxLength": 36
+    },
+    "archive": {
+      "type": "boolean"
+    },
+    "dateOutputArchive": {
+      "type": ["null","string"],
+      "minLength": 1,
+      "maxLength": 20
+    }
+  },
+  "required": ["guid", "code", "parent", "name", "owner", "consolidatedGroup", "okp", "tnved", "okved", "okpd2", "archive", "dateOutputArchive"]
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,358 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+
+      "type": "object",
+      "properties": {
+        "guid": {
+          "type": "string",
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "archive": {
+          "type": "boolean"
+        },
+        "dateOutputArchive": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 20
+        },
+        "code": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 9
+        },
+        "codeMSFO": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 50
+        },
+        "partner": {
+          "type": "string",
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "virtual": {
+          "type": "boolean"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 100
+        },
+        "nameAbbreviated": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 100
+        },
+        "nameFull": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 150
+
+        },
+        "nameEnglish": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 150
+        },
+        "type": {
+          "type": "integer",
+          "enum": [1, 2]
+        },
+        "noResident": {
+          "type": "boolean"
+        },
+        "inn": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 12
+        },
+        "kpp": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 9
+        },
+        "kppAdditional": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 9
+        },
+        "registrationNumber": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 50
+        },
+        "separateUnit": {
+          "type": "boolean"
+        },
+        "organizationHead": {
+          "type": "string",
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "concernType": {
+          "type": "string",
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "concernTypeCode": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 9
+        },
+        "concernTypeHistory": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "minLength": 36,
+                  "maxLength": 36
+                },
+                "code": {
+                  "type": "string",
+                  "minLength": 0,
+                  "maxLength": 9
+                },
+                "dateIn": {
+                  "type": "string",
+                  "minLength": 10,
+                  "maxLength": 20
+                },
+                "dateOut": {
+                  "type": "string",
+                  "minLength": 10,
+                  "maxLength": 20
+                }
+              },
+              "required": [
+                "type",
+                "code",
+                "dateIn",
+                "dateOut"
+              ]
+            }
+          ]
+        },
+        "basis": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 100
+        },
+        "division": {
+          "type": "string",
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "divisionCode": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 9
+        },
+        "divisionDate": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 20
+        },
+        "divisionHistory": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "division": {
+                  "type": "string",
+                  "minLength": 36,
+                  "maxLength": 36
+                },
+                "code": {
+                  "type": "string",
+                  "minLength": 0,
+                  "maxLength": 9
+                },
+                "dateIn": {
+                  "type": "string",
+                  "minLength": 10,
+                  "maxLength": 20
+                },
+                "dateOut": {
+                  "type": "string",
+                  "minLength": 10,
+                  "maxLength": 20
+                }
+              },
+              "required": [
+                "division",
+                "code",
+                "dateIn",
+                "dateOut"
+              ]
+            }
+          ]
+        },
+        "comment": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 255
+        },
+        "ogrn": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 13
+        },
+        "dateRegistration": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 20
+        },
+        "okpo": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 14
+
+        },
+        "okved": {
+          "type": "string",
+          "minLength": 36,
+          "maxLength": 36
+        },
+        "okvedCode": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 12
+        },
+        "ifnsCode": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 100
+        },
+        "ifnsName": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 255
+        },
+        "taxCode": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 100
+        },
+        "taxName": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 255
+        },
+        "certificateCode": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 100
+        },
+        "certificateDate": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 20
+        },
+        "contactInformation": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "integer",
+                  "enum": [1,2,3,4]
+                },
+                "typeInformation": {
+                  "type": "integer",
+                  "enum": [1,2,3,4,5,6,7]
+                },
+                "performance": {
+                  "type": "string",
+                  "minLength": 0,
+                  "maxLength": 500
+
+                },
+                "country": {
+                  "type": "string",
+                  "minLength": 0,
+                  "maxLength": 100
+                },
+                "region": {
+                  "type": "string",
+                  "minLength": 0,
+                  "maxLength": 50
+                },
+                "city": {
+                  "type": "string",
+                  "minLength": 0,
+                  "maxLength": 50
+                },
+                "email": {
+                  "type": "string",
+                  "minLength": 0,
+                  "maxLength": 100
+                },
+                "phone": {
+                  "type": "string",
+                  "minLength": 0,
+                  "maxLength": 20
+                }
+              },
+              "required": [
+                "type",
+                "typeInformation",
+                "performance",
+                "country",
+                "region",
+                "city",
+                "email",
+                "phone"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "guid",
+        "archive",
+        "dateOutputArchive",
+        "code",
+        "codeMSFO",
+        "partner",
+        "virtual",
+        "name",
+        "nameAbbreviated",
+        "nameFull",
+        "nameEnglish",
+        "type",
+        "noResident",
+        "inn",
+        "kpp",
+        "kppAdditional",
+        "registrationNumber",
+        "separateUnit",
+        "organizationHead",
+        "concernType",
+        "concernTypeCode",
+        "concernTypeHistory",
+        "basis",
+        "division",
+        "divisionCode",
+        "divisionHistory",
+        "comment",
+        "ogrn",
+        "dateRegistration",
+        "okpo",
+        "okved",
+        "okvedCode",
+        "ifnsCode",
+        "ifnsName",
+        "taxCode",
+        "taxName",
+        "certificateCode",
+        "certificateDate",
+        "contactInformation"
+      ]
+    }
+
